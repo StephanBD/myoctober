@@ -1,0 +1,20 @@
+title = "index"
+url = "/"
+layout = "default"
+is_hidden = 0
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "categoria"
+postPage = "post"
+==
+<h1>posts</h1>
+{% component 'blogPosts' %}
+
+<h2>search</h2>
+
+
+<hr>

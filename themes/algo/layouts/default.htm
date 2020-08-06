@@ -1,0 +1,82 @@
+==
+<?php
+function onTest()
+{
+    $this['result'] = input('value1') + input('value2');
+}
+?>
+==
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+  <!--=====================seoModel======================-->
+
+
+  <meta name="description" content="{{this.page.description}}">
+  <meta property="og:description" content="{{this.page.description}}">
+  
+  <!--=====================SchemaOrg======================-->
+  
+
+
+  <!--=====================font======================-->
+  {% if this.theme.font == "Lato" %}
+  {% set i = "ital,wght@0,300;500,900;1,400" %}
+
+  {% elseif this.theme.font == "Roboto" %}
+  {% set i = "wght@300;500;700" %}
+
+  {% elseif this.theme.font == "MuseoModerno" %}
+  {% set i = "wght@500" %}
+  {% endif %}
+
+  <!-- <link href="https://fonts.googleapis.com/css2?family={{this.theme.font}}:{{i}}&display=swap" rel="stylesheet"> -->
+
+  <!--===================styles========================-->
+
+  <link href="{{ ['assets/less/theme.less']|theme }}" rel="stylesheet">
+  <link href="{{ 'assets/css/style.css'|theme }}" rel="stylesheet">
+
+  <!-- vuetify -->
+  <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet"> -->
+  
+  {% styles %}
+
+
+</head>
+
+<body>
+
+
+  <!-- Header -->
+
+  <!-- Content -->
+  <section class="content m-a">
+    {% page %}
+  </section>
+
+  <!-- Scripts ======================================================= -->
+  <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
+  {% framework  %}
+
+  <!-- Vue -->
+  <script src="{{ 'assets/js/vue.min.js'|theme }}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+  <!-- <script src="{{ 'assets/js/app.js'|theme }}"></script> -->
+
+  {% scripts   %}
+
+
+</body>
+
+</html>

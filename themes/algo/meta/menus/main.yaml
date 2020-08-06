@@ -1,0 +1,77 @@
+items:
+    -
+        title: 'primera página'
+        nesting: '0'
+        type: static-page
+        url: ''
+        code: ''
+        reference: primera-pagina
+        cmsPage: ''
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+        items:
+            -
+                title: 'sub primera page'
+                nesting: '0'
+                type: static-page
+                url: ''
+                code: ''
+                reference: primera-pagina-sub-primera-page
+                cmsPage: ''
+                replace: '0'
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+    -
+        title: blog
+        nesting: ''
+        type: cms-page
+        url: ''
+        code: ''
+        reference: blog
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: productos
+        nesting: ''
+        type: cms-page
+        url: ''
+        code: ''
+        reference: productos
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: ingresar
+        nesting: ''
+        type: cms-page
+        url: ''
+        code: ''
+        reference: ingresar
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: pedidos
+        type: cms-page
+        code: ''
+        reference: pedidos
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+name: main
